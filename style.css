@@ -1,0 +1,448 @@
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E4AC74; /**/
+    font-family: 'Merriweather'; /* Sets default body text to Merriweather*/
+    overflow-x: clip;
+  }
+/* Container flex layout */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes logo left, nav right */
+    padding: 0 1rem;
+}
+  
+/* Logo image sizing */
+.logo img {
+    height: 125px; /* Adjust size as needed */
+    width: auto;
+}
+  
+/* Nav bar layout */
+.navigation-bar {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Nav links */
+.navigation-bar li a {
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.6rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navigation-bar li a:hover {
+    color: maroon; /* Sets a maroon text effect while hovering over links */
+}
+
+/* Call-to-action button */
+.navigation-bar .cta {
+    background-color: goldenrod;
+    color: #111;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent it from wrapping */
+}
+  
+.navigation-bar .cta:hover {
+    background-color: goldenrod;
+    color: maroon;
+}
+  
+/* Navbar */
+.navbar {
+    background-color: #111;
+    padding: 0.5rem 0;
+    position: sticky; /*Makes sure that the nav bar stays in the same position even while scrolling down*/
+    top: 0;
+    z-index: 1000; /* Ensures that the Nav Bar is positioned above everything else */
+}
+/*Homepage Photo*/
+.homepage {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.homepage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintains aspect ratio and fills the container */
+    transition: transform 0.5s ease-in-out; /* Smooth zoom effect when page loads */
+}
+
+/* Styling for the text inside the homepage image*/
+.hometext {
+    font-family: 'Cinzel', serif; /* Sets text to Cinzel font*/
+    font-size: 3rem;
+    font-weight: 700;
+    color: whitesmoke; /*Color of the text*/
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),
+        -2px -2px 5px rgba(0, 0, 0, 0.5),
+        1px 1px 3px rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Home Section */
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #111; /* Dark backdrop to match the theme */
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-bottom: 3px solid goldenrod;
+}
+
+/* Game Abstract */
+.abstract-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abstract-text-box {
+  flex: 1 1 500px;
+  color: #f5f5f5;
+}
+
+.abstract-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: goldenrod;
+  text-align: center;
+}
+
+.abstract-text {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.abstract-video {
+  flex: 1 1 500px;
+}
+
+.abstract-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+/* What's new section*/
+.new-section {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  font-family: 'Merriweather', serif;
+  width: 100%;
+}
+
+.new-section img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: brightness(40%); /* Darkens the image to make text readable */
+}
+
+.new-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.changes-section {
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: left;
+}
+
+.changes-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  color: goldenrod;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.changes-text {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: white;
+}
+
+/* Text Shadow for Readability */
+.changes-title, .changes-text li {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer CSS */
+.site-footer {
+    background-color: #111;
+    color: goldenrod; /* Gold accent */
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    width: 100%;
+    border-top: 3px solid goldenrod;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: maroon;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  /* Footer Nav Link styling*/
+  .footer-links a {
+    color: goldenrod;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: maroon;
+    text-decoration: underline;
+  }
+
+  /* Social Media Icon styling*/
+  .social-icons {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: goldenrod;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons a:hover {
+    color: maroon;
+    transform: scale(1.2);
+  }
+  
+  /* Firaxis logo */
+  .firaxis-link img {
+    height: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .firaxis-link img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-bar {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .logo img {
+    height: 100px;
+  }
+
+  .abstract-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .abstract-text-box,
+  .abstract-video {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .abstract-title {
+    font-size: 2rem;
+  }
+
+  .abstract-text {
+    font-size: 1rem;
+  }
+
+  .changes-section {
+    padding: 20px;
+  }
+
+  .changes-title {
+    font-size: 1.8rem;
+  }
+
+  .changes-text {
+    font-size: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 80px;
+  }
+
+  .hometext {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .abstract-title {
+    font-size: 1.6rem;
+  }
+
+  .abstract-text {
+    font-size: 0.95rem;
+  }
+
+  .changes-title {
+    font-size: 1.6rem;
+  }
+
+  .changes-text {
+    font-size: 0.95rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hometext {
+    font-size: 1.4rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .abstract-title {
+    font-size: 1.4rem;
+  }
+
+  .abstract-text {
+    font-size: 0.9rem;
+  }
+
+  .changes-title {
+    font-size: 1.4rem;
+  }
+
+  .changes-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .changes-section {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .changes-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

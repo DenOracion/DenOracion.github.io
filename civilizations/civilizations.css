@@ -1,0 +1,324 @@
+/* Global background, font, and text color */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', sans-serif;
+  background-color: #1e1e1e; /* Civ VI dark background */
+  color: #f4f1e8; /* Pale parchment-style text */
+}
+
+/* Apply Cinzel to all headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+}
+
+button,
+.learn-more-btn {
+  font-family: 'Merriweather', serif;
+}
+
+/* Container flex layout */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes logo left, nav right */
+    padding: 0 1rem;
+}
+  
+/* Logo image sizing */
+.logo img {
+    height: 125px; 
+    width: auto;
+}
+  
+/* Nav bar layout */
+.navigation-bar {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Nav links */
+.navigation-bar li a {
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.6rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navigation-bar li a:hover {
+    color: maroon; 
+}
+
+/* CTA button */
+.navigation-bar .cta {
+    background-color: goldenrod;
+    color: #111;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent it from wrapping */
+}
+  
+.navigation-bar .cta:hover {
+    background-color: goldenrod;
+    color: maroon;
+}
+  
+/* Navbar */
+.navbar {
+    background-color: #111;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* === INTRODUCTION SECTION === */
+/* Short description paragraph at the top */
+.intro {
+  padding: 40px 20px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #f4f1e8;
+}
+
+/* Highlight for keywords (like "Civilizations") */
+.intro strong {
+  color: #c6aa58; /* Gold accent for emphasis */
+}
+
+/* === FILTER BAR === */
+/* Container for DLC and other filter buttons */
+.filter-bar {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Buttons used for filtering by DLC, etc. */
+.filter-btn {
+  background-color: #cba135; /* Civ VI teal */
+  color: #2f2a28;
+  border: none;
+  padding: 10px 18px;
+  margin: 6px;
+  border-radius: 30px; /* Pill shape */
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.filter-group {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+.filter-group h3 {
+  color: #c6aa58;
+  margin-bottom: 10px;
+}
+
+/* Hover effect for filter buttons */
+.filter-btn:hover {
+  background-color: #e4c773; /* Bright gold on hover */
+  color: #1e1e1e;
+  transform: scale(1.05);
+}
+
+/* === CIVILIZATION GRID === */
+/* Responsive grid layout for civ cards */
+.civ-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 30px;
+}
+
+/* Card styling for the civilizations */
+/* Individual civ card container */
+.civ-card {
+  background-color: #1d1d1d;
+  border: 2px solid #444;
+  border-radius: 10px;
+  text-align: center;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: #f4f1e8;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1; /* Ensure hover doesn't stack under other elements */
+  display: flex;
+}
+
+/* Hover lift effect */
+.civ-card:hover {
+  transform: scale(1.03);
+  z-index: 10; /* Lift it above others so it doesn't overlap them */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.civ-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 8px;
+}
+/* Card inner content (text, abilities) */
+.civ-card-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Civ name heading */
+.civ-card h2 {
+  color: #c6aa58; /* Gold title */
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+/* Unique ability, unit, and district/infra description blocks */
+.trait {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+/* === LEARN MORE LINK === */
+/* Link to external civ page (Fandom) */
+.learn-more-section {
+  text-align: center;
+  margin-top: 30px 0;
+}
+
+a.learn-more-btn {
+  display: inline-block;       
+  margin: 0 auto;       
+  padding: 0.8rem 1.6rem;   
+  text-align: center;   
+  background-color: #b98d28;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Hover effect for learn more */
+a.learn-more-btn:hover {
+  background-color: #e4c773;
+  color: #1e1e1e;
+}
+
+.site-footer {
+    background-color: #111;
+    color: goldenrod; /* Gold accent */
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    width: 100%;
+    border-top: 3px solid goldenrod;
+    flex-shrink: 0;
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: maroon;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .footer-links a {
+    color: goldenrod;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: maroon;
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: goldenrod;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons a:hover {
+    color: maroon;
+    transform: scale(1.2);
+  }
+  
+  .firaxis-link img {
+    height: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .firaxis-link img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+/* === MEDIA QUERIES === */
+/* Phone view (≤ 480px wide) */
+@media screen and (max-width: 480px) {
+  .civ-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 16px;
+  }
+
+  .filter-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .civ-card-content {
+    padding: 16px;
+  }
+
+  a.learn-more-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

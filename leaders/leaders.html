@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="leaders.css"> <!--Link to css stylesheet for layout and typography-->
+    <!--Third Party Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!--Cinzel font-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> <!--Merriweather font-->
+    <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet"> <!--FontAwesome for social media logos-->
+    <title>Sid Meier's Civilization VI</title>
+</head>
+<body>
+  <!--Navigation Bar to help navigate the other pages-->
+<header class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="../CivilizationVI-Aspyr-Logo__1_.png" alt="civ6 logo">
+        </div>
+        <nav>
+            <ul class="navigation-bar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../leaders/leaders.html">Leaders</a></li>
+                <li><a href="../civilizations/civilizations.html">Civilizations</a></li>
+                <li><a href="../expansions/expansions.html">Expansions</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><a href="../store/store.html" class="cta">Play Civilization VI Today!</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- A small intro section with a title and brief explanation of what leaders are -->
+<section class="leaders-intro">
+  <h1>Leaders: Lead a Civilization to the stars</h1>
+  <p>
+    Leaders are representatives of the different civilizations in Civilization VI. The leaders were selected based on historical figures who accomplished great things for their respective nations.
+    Each leader comes with a dedicated unique ability that gives them special bonuses and gameplay advantages in game and a unique agenda that dictates how the AI will play and interact with players.
+  </p>
+</section>
+<!--Divider to separate galleries and the intros-->
+<hr class="divider" />
+
+<!--Section to introduce the galleries-->
+<section class="leaders-gallery-intro"> 
+    <h2>Meet Some of The Leaders You Can Play in Sid Meier's Civilization VI</h2>
+</section>
+
+<!--Section containing different leader carousels (for every expansion)-->
+<section class="galleries">
+  <!--Carousel for base game leaders-->
+  <div class="leader-carousel" id="base-game">
+    <h3>Base Game Leaders</h3>
+    <div class="carousel">
+      <button class="prev-btn" data-carousel="base-game">&#8592;</button>
+      <div class="carousel-content" id="base-game-content">
+        <!--JavaScript will fill this in with the leader cards-->
+      </div>
+      <button class="next-btn" data-carousel="base-game">&#8594;</button>
+    </div>
+  </div>
+
+  <!--Carousels for Rise and Fall, Gathering Storm, New Frontier and Leader passes, all following the same template as the base game carousel, instead changing the information and leaders being loaded in-->
+  <div class="leader-carousel" id="rise-fall">
+    <h3>Rise and Fall Leaders</h3>
+    <div class="carousel">
+      <button class="prev-btn" data-carousel="rise-fall">&#8592;</button>
+      <div class="carousel-content" id="rise-fall-content"></div>
+      <button class="next-btn" data-carousel="rise-fall">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="leader-carousel" id="gathering-storm">
+    <h3>Gathering Storm Leaders</h3>
+    <div class="carousel">
+      <button class="prev-btn" data-carousel="gathering-storm">&#8592;</button>
+      <div class="carousel-content" id="gathering-storm-content"></div>
+      <button class="next-btn" data-carousel="gathering-storm">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="leader-carousel" id="new-frontier">
+    <h3>New Frontier Leaders</h3>
+    <div class="carousel">
+      <button class="prev-btn" data-carousel="new-frontier">&#8592;</button>
+      <div class="carousel-content" id="new-frontier-content"></div>
+      <button class="next-btn" data-carousel="new-frontier">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="leader-carousel" id="leader-pass">
+    <h3>Leader Pass Leaders</h3>
+    <div class="carousel">
+      <button class="prev-btn" data-carousel="leader-pass">&#8592;</button>
+      <div class="carousel-content" id="leader-pass-content"></div>
+      <button class="next-btn" data-carousel="leader-pass">&#8594;</button>
+    </div>
+  </div>
+ </section>
+
+ <!--Learn more button that will take the player to a Fandom site where they can learn about every leader since this was only a showcase-->
+<section class="learn-more-section">
+    <a href="https://civilization.fandom.com/wiki/Leaders_(Civ6)" class="learn-more-button" target="_blank">Learn More</a>
+</section>
+<!--Footer section containing social media links and links to the other subpages-->
+<footer class="site-footer">
+     <div class="footer-container">
+        <p class="footer-title">Sid Meier's Civilization VI</p>
+            
+        <p class="footer-links">
+            <a href="../index.html">Home</a> |
+            <a href="../leaders/leaders.html">Leaders</a> |
+            <a href="../civilizations/civilizations.html">Civilizations</a> |
+            <a href="../expansions/expansions.html">Expansions</a> |
+            <a href="../gallery/gallery.html">Gallery</a>
+        </p>
+            
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@civilization"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/civ//"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/CivGame?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.firaxis.com/" target="_blank" rel="noopener noreferrer" class="firaxis-link">
+                <img src="../Firaxis_Games.svg.png" alt="Firaxis Games Logo">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="leaders.js"></script>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!--Cinzel font-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> <!--Merriweather font-->
+    <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet"> <!--FontAwesome for social media logos-->
+    <link rel="stylesheet" href="civilizations.css">
+    <title>Sid Meier's Civilization VI</title>
+</head>
+<body>
+<!--Navigation Bar containing links to the other subpages-->
+<header class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="../CivilizationVI-Aspyr-Logo__1_.png" alt="civ6 logo">
+        </div>
+        <nav>
+            <ul class="navigation-bar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../leaders/leaders.html">Leaders</a></li>
+                <li><a href="../civilizations/civilizations.html">Civilizations</a></li>
+                <li><a href="../expansions/expansions.html">Expansions</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><a href="../store/store.html" class="cta">Play Civilization VI Today!</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 20px; text-align: center; max-width: 800px; margin: 0 auto; color: #f4f1e8;">
+    <!--Brief definition of Civilizations-->
+  <p style="font-size: 1.1rem; line-height: 1.6;">
+    <strong>Civilizations</strong> are playable factions in Sid Meier's Civilization VI and its expansions, each of which represents a historical nation, empire, or cultural group. Each civilization has a unique ability and two other unique components: a unit and a piece of infrastructure, which may be a building, a district, or a tile improvement.
+  </p>
+</section>
+
+<!--Filter system so users can filter civilizations based on their recommended victory path and DLCs they belong to-->
+<section class="filters">
+    <div class="filter-group">
+      <h3>Filter by DLC:</h3> <!--User can filter civilizations that were released in the base game, or the expansions-->
+      <button class="filter-btn" onclick="filterCivs('All', currentVictory)">All</button>
+      <button class="filter-btn" onclick="filterCivs('Base Game', currentVictory)">Base Game</button>
+      <button class="filter-btn" onclick="filterCivs('Rise and Fall', currentVictory)">Rise and Fall</button>
+      <button class="filter-btn" onclick="filterCivs('Gathering Storm', currentVictory)">Gathering Storm</button>
+      <button class="filter-btn" onclick="filterCivs('New Frontier Pass', currentVictory)">New Frontier Pass</button>
+    </div>
+
+    <div class="filter-group">
+      <h3>Filter by Victory Type:</h3> <!--User can filter civilizations based on their recommended victory.-->
+      <button class="filter-btn" onclick="filterCivs(currentDLC, 'All')">All</button>
+      <button class="filter-btn" onclick="filterCivs(currentDLC, 'Domination')">Domination</button>
+      <button class="filter-btn" onclick="filterCivs(currentDLC, 'Culture')">Culture</button>
+      <button class="filter-btn" onclick="filterCivs(currentDLC, 'Science')">Science</button>
+      <button class="filter-btn" onclick="filterCivs(currentDLC, 'Religion')">Religion</button>
+      <button class="filter-btn" onclick="filterCivs(currentDLC, 'Diplomacy')">Diplomacy</button>
+    </div>
+</section>
+
+<!--Grid to showcase Civilization cards-->
+<section id="featured-civs" class="civ-grid">
+    <!--Template for Civilization cards-->
+    <div class="civ-card" data-dlc="Base Game" data-victory="Religion,Culture"> <!--Id for DLC they belong to and Recommended Victory types-->
+        <img src="base_logos/Russian_29.webp" alt="Russia"> <!--Logo of the Civilization-->
+        <h2>Russia</h2> <!--Name of the Civilization-->
+        <p><strong>Leader:</strong> Peter the Great</p> <!--Possible Leader(s) of the Civilization-->
+
+        <p><strong>Unique Ability:</strong> Mother Russia</p> <!--Name of ability and what it does-->
+        <p>Cities start with more tiles and tundra tiles provide more faith and production.</p>
+
+        <p><strong>Unique Unit:</strong> Cossack</p> <!--Name of the unique unit and what makes it different from the standard units-->
+        <p>An Industrial era unique light cavalry unit that replaces the cavalry. Can move after attacking and gains bonus combat strength when fighting in or adjacent home territory.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Lavra</p> <!--Name of the Unique infrastructure that can be a district, building, or a tile improvement that can only be built by that specific Civilization-->
+        <p>Replaces the Holy Site. Cheaper to produce and generates Great Artist, Writer, and Musician points when the district's buildings are constructed.</p>
+    </div>
+
+    <!--The rest of the cards follow the same format as the Russia card just with altered information-->
+    <div class="civ-card" data-dlc="Base Game" data-victory="Science,Domination,culture">
+        <img src="base_logos/German_29.webp" alt="Germany">
+        <h2>Germany</h2>
+        <p><strong>Leader:</strong> Frederick Barbarossa, Ludwig II</p>
+
+        <p><strong>Unique Ability:</strong> Free Imperial Cities</p>
+        <p>Each city can build one more specialty district than the population limit would allow.</p>
+
+        <p><strong>Unique Unit:</strong> U-Boat</p>
+        <p>A Modern era unique naval unit that replaces the submarine. Cheaper to produce and gains bonus sight and combat strength while fighting on ocean tiles.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Hansa</p>
+        <p>Replaces the Industrial Zone. Cheaper to produce and gains adjacency bonuses to Commercial Hubs and resources.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Base Game" data-victory="Religion,Science,Culture,Domination">
+        <img src="base_logos/Japanese_29.webp" alt="Japan">
+        <h2>Japan</h2>
+        <p><strong>Leader:</strong> Hojo Tokimune, Tokugawa</p>
+
+        <p><strong>Unique Ability:</strong> Meiji Restoration</p>
+        <p>Districts receive +1 adjacency bonus from adjacent districts instead of +0.5.</p>
+
+        <p><strong>Unique Unit:</strong> Samurai</p>
+        <p>A Medieval era unique melee unit that replaces the man-at-arms. Does not suffer combat penalties when wounded.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Electronics Factory</p>
+        <p>Replaces the factory. Gives +4 production to city centers compared to the normal +3. After researching the Electricity technology, the building provides +4 culture.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Base Game" data-victory="Domination">
+        <img src="base_logos/Roman_29.webp" alt="Rome">
+        <h2>Rome</h2>
+        <p><strong>Leader:</strong> Trajan, Julius Caesar</p>
+
+        <p><strong>Unique Ability:</strong> All Roads Lead to Rome</p>
+        <p>Roman cities start with a trading post and if within trade route range of the capital, a road leading to it. Trade routes gain additional gold for every Roman trading posts they pass through.</p>
+
+        <p><strong>Unique Unit:</strong> Legion</p>
+        <p>A Classical era unique melee unit that replaces the swordsman. Higher combat strength, more expensive to produce, and comes with a build charge to build forts or clear terrain.</p>
+        
+        <p><strong>Unique Infrastructure:</strong> Bath</p>
+        <p>Replaces the Aqueduct district. Cheaper to construct and provides more housing.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Base Game" data-victory="Religion,Science,Culture">
+        <img src="base_logos/Brazilian_29.webp" alt="Brazil">
+        <h2>Brazil</h2>
+        <p><strong>Leader:</strong> Pedro II</p>
+
+        <p><strong>Unique Ability:</strong> Amazon</p>
+        <p>Rainforest tiles provide +1 adjacencies for Campus, Commercial Hubs, Holy Sites and Theater Square districts. Owned rainforests provide +1 appeal to adjacent tiles instead of -1 appeal.</p>
+
+        <p><strong>Unique Unit:</strong> Minas Geraes</p>
+        <p>An Industrial era unique ranged naval unit that replaces the battleship. Higher combat, ranged, and anti-air strength than a normal battleship. Unlocked with the Nationalism civic instead of Steel technology.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Street Carnival</p>
+        <p>Replaces the Entertainment Complex. Cheaper to construct, provides more amenities, and allows the city to run the Carnival city project, and turns production to amenities and Great Person points.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Base Game" data-victory="Domination">
+        <img src="base_logos/Aztec_29.webp" alt="Aztec">
+        <h2>Aztec</h2>
+        <p><strong>Leader:</strong> Montezuma</p>
+
+        <p><strong>Unique Ability:</strong> Legend of the Five Suns</p>
+        <p>Can use builder charges to complete 20% percent of a district's production cost.</p>
+
+        <p><strong>Unique Unit:</strong> Eagle Warrior</p>
+        <p>An Ancient era unique melee unit that replaces the warrior. Costs more to produce but has higher combat strength and can capture defeated enemy units, turning them into builders.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Tlatchtli</p>
+        <p>Replaces the arena. Cheaper to produce and provides faith and Great General points.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Rise and Fall" data-victory="Science">
+        <img src="rise_and_fall_logos/Korea_Logo.webp" alt="Korea">
+        <h2>Korea</h2>
+        <p><strong>Leader:</strong> Seondeok, Sejong</p>
+
+        <p><strong>Unique Ability:</strong> Three Kingdoms</p>
+        <p>Farms receive +1 food and mines receive +1 science for each adjacent Seowon.</p>
+
+        <p><strong>Unique Unit:</strong> Hwacha</p>
+        <p>A Renaissance era unique ranged unit that replaces the field cannon. Unlocked earlier than the field cannon and cheaper to produce and maintain, however has a lower combat strength and cannot move and attack in the same turn.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Seowon</p>
+        <p>Replaces the Campus. Cheaper to produce, but must be built on a hill and starts with +4 adjacency but -1 adjacency for each adjacent district.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Rise and Fall" data-victory="Domination">
+        <img src="rise_and_fall_logos/Mongolian_29.webp" alt="Mongolia">
+        <h2>Mongolia</h2>
+        <p><strong>Leader:</strong> Genghis Khan, Kublai Khan</p>
+
+        <p><strong>Unique Ability:</strong> Örtöö</p>
+        <p>Sending a trade route creates a trading post in the city instead of when the trade route is completed. Gains an extra level of diplomatic visibility with civilizations with a Mongolian trading post. +6 combat strength for all units for each level of diplomatic visibility Mongolia has over the other civlization, instead of +3.</p>
+
+        <p><strong>Unique Unit:</strong> Keshig</p>
+        <p>A Medieval era unique ranged cavalry unit. When in formation, its movement is shared with all units.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Ordu</p>
+        <p>Replaces the stable. All cavalry units trained in a city with an Ordu gain +1 movement.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Rise and Fall" data-victory="Science,Culture">
+        <img src="rise_and_fall_logos/Dutch_29.webp" alt="Netherlands">
+        <h2>Netherlands</h2>
+        <p><strong>Leader:</strong> Wilhelmina</p>
+
+        <p><strong>Unique Ability:</strong> Grote Rivieren</p>
+        <p>Rivers provide a +2 adjacency bonus for Campus, Theater Square, Industrial Zone districts. Building Harbor districts triggers a Culture bomb, claiming surrounding tiles.</p>
+
+        <p><strong>Unique Unit:</strong> De Zeven Provinciën</p>
+        <p>A Renaissance era unique ranged naval unit that replaces the frigate. Has more combat strength than the normal frigate and gains +7 combat strength against defense districts.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Polder</p>
+        <p>A unique tile improvement that must be built on coast or lake tiles that provides gold, housing, production, and food. The production and food bonuses can increase for every adjacent Polder.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Rise and Fall" data-victory="Science">
+        <img src="rise_and_fall_logos/Scottish_29.webp" alt="Scotland">
+        <h2>Scotland</h2>
+        <p><strong>Leader:</strong> Robert The Bruce</p>
+
+        <p><strong>Unique Ability:</strong> Scottish Enlightenment</p>
+        <p>Happy cities gain +5% science and +5% production and generate bonus Great Scientist points in their Campuses and Great Engineer points in their Industrial Zones. Ecstatic cities double these bonuses.</p>
+
+        <p><strong>Unique Unit:</strong> Highlander</p>
+        <p>An Industrial era unique reconnaissance unit that replaces the ranger. Gains bonus combat strength when fighting in hill and woods terrain.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Golf Course</p>
+        <p>A unique tile improvement that unlocks with the Reformed Church civic, grants amenities, culture, gold and housing.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Rise and Fall" data-victory="Domination">
+        <img src="rise_and_fall_logos/Zulu_29.webp" alt="Zulu">
+        <h2>Zulu</h2>
+        <p><strong>Leader:</strong> Shaka</p>
+
+        <p><strong>Unique Ability:</strong> Isibongo</p>
+        <p>Capturing a city will upgrade the conquering the unit into a corps or army if the necesscary civics are unlocked. Additional loyalty per turn to cities with a garrisoned unit, which increases if the unit is a corps or an army.</p>
+
+        <p><strong>Unique Unit:</strong> Impi</p>
+        <p>A Medieval era unique anti-cavalry unit that replaces the pikeman. Gains experience faster, increased flanking bonus, cheaper to produce and maintain.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Ikanda</p>
+        <p>Replaces the encampment. Cheaper to build, provides housing, allows corps and armies to be built without respective buildings and are trained faster. Buildings in the Ikanda provide bonus gold and science.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Rise and Fall" data-victory="Culture,Domination">
+        <img src="rise_and_fall_logos/Mapuche_29.webp" alt="Mapuche">
+        <h2>Mapuche</h2>
+        <p><strong>Leader:</strong> Lautaro</p>
+
+        <p><strong>Unique Ability:</strong> Toqui</p>
+        <p>Cities with established Governors gain +5% culture and production and 10% more combat experience towards all units trained in the city. These bonuses are tripled in cities not founded by the Mapuche. All cities within nine tiles of a Mapuche city with a Governor gain loyalty per turn.</p>
+
+        <p><strong>Unique Unit:</strong> Malón Raider</p>
+        <p>A Renaissance era unique light cavalry unit unlocked with the Gunpowder technology. Gain bonus combat strength if within four tiles of friendly territory. Pillaging also costs one movement point.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Chemamull</p>
+        <p>A unique tile improvement that can only be built on tiles with appeal of breathtaking or more. Grants production and cuture equal to 75% of a tile's appeal.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Gathering Storm" data-victory="Domination">
+        <img src="gathering_storm_logos/Ottoman_29.webp" alt="Ottoman">
+        <h2>Ottoman</h2>
+        <p><strong>Leader:</strong> Suleiman</p>
+
+        <p><strong>Unique Ability:</strong> Great Turkish Bombard</p>
+        <p>Additional production towards siege units and siege units gain combat strength when attacking defensible districts. Conquering a city doesn't cause that city to lose population and the city gains amenities and loyalty per turn for cities not founded by the Ottomans.</p>
+
+        <p><strong>Unique Unit:</strong> Barbary Corsair</p>
+        <p>A Medieval era unique naval raider unit that replaces the privateer and costs no movement points to coastal raid.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Grand Bazaar</p>
+        <p>Replaces the bank. Cheaper to build, accumulates one extra strategic resource for every different type of strategic resources the city improved. Receives amenities for every type of luxury resource the city has improved.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Gathering Storm" data-victory="Culture,Diplomacy">
+        <img src="gathering_storm_logos/Canadian_29.webp" alt="Canada">
+        <h2>Canada</h2>
+        <p><strong>Leader:</strong> Wilfrid Laurier</p>
+
+        <p><strong>Unique Ability:</strong> Four Faces of Peace</p>
+        <p>Cannot declare surprise wars or be the target of surprise wars or declare wars on city-states. For every 100 tourism earned gain 1 diplomatic favor. Diplomatic favor gained from successfully completing emergencies or scored competitions is doubled.</p>
+
+        <p><strong>Unique Unit:</strong> Mountie</p>
+        <p>A unique Modern era light cavalry unit unlocked with the Conservation civic. Can build national parks and gains combat strength when within two tiles of a national park. This bonus is doubled if the park is owned by Canada.<p>
+
+        <p><strong>Unique Infrastructure:</strong> Ice Hockey Rink</p>
+        <p>A unique tile improvement that gives amenities, appeal for adjacent tiles, culture for every adjacent tundra and snow tiles, and food and production with the Professional Sports civic. However only one can be built per city.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Gathering Storm" data-victory="Diplomacy,Religion">
+        <img src="gathering_storm_logos/Malian_29.webp" alt="Mali">
+        <h2>Mali</h2>
+        <p><strong>Leader:</strong> Mansa Musa, Sundiata Keita</p>
+
+        <p><strong>Unique Ability:</strong> Songs of the Jell</p>
+        <p>City Centers receive +1 faith and +1 food for every adjacent desert tile. Mines however lose  -1 production but gain +4 gold. May purchase Commercial Hub buildings with faith and suffer a production penalty while building units.</p>
+
+        <p><strong>Unique Unit:</strong> Mandelaku Cavalry</p>
+        <p>A Medieval era unique heavy cavalry unit that replaces the knight. Traders within four tiles of one cannot be plundered and provides gold equal to the combat strength of a unit it defeats.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Suguba</p>
+        <p>Replaces the Commercial Hub. Cheaper to build, gains bonus adjacency to Holy Sites, and provides a 20% discount on all gold and faith purchases in the city.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Gathering Storm" data-victory="Diplomacy,Domination">
+        <img src="gathering_storm_logos/Hungarian_29.webp" alt="Hungary">
+        <h2>Hungary</h2>
+        <p><strong>Leader:</strong> Matthias Corvinus</p>
+
+        <p><strong>Unique Ability:</strong> Pearl of the Danube</p>
+        <p>Gain +50% production to districts and buildings built across a river from a city center.</p>
+
+        <p><strong>Unique Unit:</strong> Huszár</p>
+        <p>An Industrial era unique light cavalry unit that replaces the cavalry. Costs more to produce but gains combat strength for every active alliance Hungary has.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Thermal Bath</p>
+        <p>Replaces the zoo. Gives more amenities than the regular zoo, provides production to all city centers within six tiles of the Thermal Bath and provides more amenities and tourism if its city has a geothermal fissure in its borders.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Gathering Storm" data-victory="Diplomacy,Culture">
+        <img src="gathering_storm_logos/Swedish_29.webp" alt="Sweden">
+        <h2>Sweden</h2>
+        <p><strong>Leader:</strong> Kristina</p>
+
+        <p><strong>Unique Ability:</strong> Nobel Prize</p>
+        <p>Gain +50 diplomatic favor after recruiting a Great Person. Factories and Universities produce an additional Great Engineer and Great Scientist point respectively. When Sweden is in the game, add three unique Nobel Prize World Congress competitions in the Industrial era.</p>
+
+        <p><strong>Unique Unit:</strong> Carolean</p>
+        <p>A Renaissance era unique anti-cavalry unit that replaces the pike and shot. Has more movement points, cheaper to maintain, and gains +3 combat strength for each point of unused movement.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Open-Air Museum</p>
+        <p>A unique tile improvement that grants loyalty. For every type of terrain a Swedish city was settled on, Open-Air Museums gain Culture and Tourism.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="Gathering Storm" data-victory="Religion,Science,Culture">
+        <img src="gathering_storm_logos/Incan_29.webp" alt="Inca">
+        <h2>Inca</h2>
+        <p><strong>Leader:</strong> Pachacuti</p>
+
+        <p><strong>Unique Ability:</strong> Mit'a</p>
+        <p>Citizens can work mountain tiles and these tiles gain bonus production and food for each adjacent Terrace Farm. Mountains also gain additional production once the Inca reach the Industrial era.</p>
+
+        <p><strong>Unique Unit:</strong> Warak'aq</p>
+        <p>A Medieval era unique reconnaissance unit that replaces the skirmisher. Higher range strength and can attack twice per turn if movement allows. However is more expensive to produce.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Terrace Farm</p>
+        <p>A unique tile improvement that must be built on plains, grassland, desert hill tiles. Provides food and housing, food bonuses increase for every Terrace Farm and Mountain. If adjacent to fresh water and aqueducts, gain production as well.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="New Frontier Pass" data-victory="Domination">
+        <img src="new_frontier_logos/Babylonian_29.webp" alt="Babylon">
+        <h2>Babylon</h2>
+        <p><strong>Leader:</strong> Hammurabi</p>
+
+        <p><strong>Unique Ability:</strong> Enuma Anu Enlil</p>
+        <p>Eurekas instantly unlock their respective technology, but produce -50% science per turn.</p>
+
+        <p><strong>Unique Unit:</strong> Sabum Kibittum</p>
+        <p>A unique Ancient era melee unit available without any research. Deal more damage to heavy and light cavalry units and gains three movement points and a sight range of three.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Palgum</p>
+        <p>Replaces the water mill. Provides more production than a water mill and also provides housing and food to all tiles adjacent to a source of fresh water.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="New Frontier Pass" data-victory="Domination">
+        <img src="new_frontier_logos/Gran_Colombian_29.webp" alt="Gran Colombia">
+        <h2>Gran Colombia</h2>
+        <p><strong>Leader:</strong> Simón Bolívar</p>
+
+        <p><strong>Unique Ability:</strong> Ejército Patriota</p>
+        <p>All units gain one extra movement point. Promoting a unit does not end its turn.</p>
+
+        <p><strong>Unique Unit:</strong> Llanero</p>
+        <p>An Industrial era unique light cavalry unit that replaces the cavalry. Cheaper to maintain, and gains combat strength for every adjacent Llanero. When a Commandante General uses their retire ability and in range, the Llanero regenerates all HP.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Hacienda</p>
+        <p>A unique tile improvement that provides gold, production, housing, food for every two adjacent plantations. The additional production can increase for every adjacent Hacienda.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="New Frontier Pass" data-victory="Diplomacy,Science">
+        <img src="new_frontier_logos/Portuguese_29.webp" alt="Portugal">
+        <h2>Portugal</h2>
+        <p><strong>Leader:</strong> João III</p>
+
+        <p><strong>Unique Ability:</strong> Casa da Índia</p>
+        <p>International trade routes can only be sent to cities on the coast or with a harbor, but gain +50% yields. Traders also have +50% range over water and can instantly embark into water.</p>
+
+        <p><strong>Unique Unit:</strong> Nau</p>
+        <p>A Renaissance era unique melee naval unit that replaces the caravel. Receives one free promotion when trained, purchased or upgraded from an earlier unit. Has two build charges and can use them to build Feitorias and costs less to maintain.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Navigation School, Feitoria</p>
+        <p>The Navigation School replaces the university. Grants additional production toward naval units in the city and provides science for every two coastal and lake tiles in the city.</p>
+        <p>The Feitoria is a unique tile improvement that can be built by the Nau unique unit. It must be built next to a coast or lake tile adjacent to land and a bonus or luxury resource in the territory of a city-state or civilization you have open borders with. Provides gold and production and adds gold and production to trade routes to this city.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="New Frontier Pass" data-victory="Domination,Culture">
+        <img src="new_frontier_logos/Vietnamese_29.webp" alt="Vietnam">
+        <h2>Vietnam</h2>
+        <p><strong>Leader:</strong> Bà Triệu</p>
+
+        <p><strong>Unique Ability:</strong> Nine Dragon River Delta</p>
+        <p>All specialty districts can only be built on rainforest, woods, and marsh tiles. Buildings on these features gain bonus yields, +1 culture in woods, +1 science in rainforest and +1 production in marsh. Vietnam can also plant woods earlier than normal.</p>
+
+        <p><strong>Unique Unit:</strong> Voi Chiến</p>
+        <p>A Medieval era unique ranged unit that replaces the crossbowman. Can move after attacking, higher combat strength and higher range and sight. But are more expensive to produce.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Thành</p>
+        <p>Replaces the encampment. Cheaper to build, is not considered a specialty district and does not require population to build. It also provides +2 culture for every adjacent district and the culture adjacency is converted to tourism after the Flight technology. It however does not provide Great General points.</p>
+    </div>
+
+    <div class="civ-card" data-dlc="New Frontier Pass" data-victory="Religion,Culture,Science">
+        <img src="new_frontier_logos/Ethiopian_29.webp" alt="Ethiopia">
+        <h2>Ethiopia</h2>
+        <p><strong>Leader:</strong> Menelik II</p>
+
+        <p><strong>Unique Ability:</strong> Aksumite Legacy</p>
+        <p>Improved resource tiles receive faith for each copy of the resource the city owns. International trade routes gain faith for each resource in the origin city. Can purchase Archaeologists and Archaeological Museums with faith.</p>
+
+        <p><strong>Unique Unit:</strong> Oromo Cavalry</p>
+        <p>A Medieval era unique light cavalry unit that replaces the courser. Higher combat strength, sight range and no movement penalty on hills.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Rock-Hewn Church</p>
+        <p>A unique tile improvement that provides appeal and faith for every adjacent hill and mountain tile. This faith is converted to tourism with the Flight civic.</p>
+    </div>
+    
+    <div class="civ-card" data-dlc="New Frontier Pass" data-victory="Religion,Domination">
+        <img src="new_frontier_logos/Byzantine_29.webp" alt="Byzantium">
+        <h2>Byzantium</h2>
+        <p><strong>Leader:</strong> Basil II, Theodora</p>
+
+        <p><strong>Unique Ability:</strong> Taxis</p>
+        <p>Additional +3 combat and religious strength for all units for every holy city Byzantium has converted into their religion, including Byzantium's own holy city. Byzantium's religion is spread to nearby cities when a unit from an enemy civilization or city-state is defeated. Earn bonus Great Prophet points from Holy Sites</p>
+
+        <p><strong>Unique Unit:</strong> Dromon</p>
+        <p>A Classical era unique naval ranged unit that replaces the quadrireme. Enjoys higher combat strength against land and naval units and additional range compared to a normal quadrireme.</p>
+
+        <p><strong>Unique Infrastructure:</strong> Hippodrome</p>
+        <p>Replaces the Entertainment Complex. Cheaper to build, provides more amenities and provides a free heavy cavalry unit with no resource or maintenance cost when first constructed and for each building constructed.</p>
+    </div>
+</section>
+
+<section class="learn-more-section">
+    <a href="https://civilization.fandom.com/wiki/Civilizations_(Civ6)" class="learn-more-btn" target="_blank">Learn More</a>
+</section>
+
+<!--Footer section containing social media links and links to the other subpages-->
+<footer class="site-footer">
+     <div class="footer-container">
+        <p class="footer-title">Sid Meier's Civilization VI</p>
+            
+        <p class="footer-links">
+            <a href="../index.html">Home</a> |
+            <a href="../leaders/leaders.html">Leaders</a> |
+            <a href="../civilizations/civilizations.html">Civilizations</a> |
+            <a href="../expansions/expansions.html">Expansions</a> |
+            <a href="../gallery/gallery.html">Gallery</a>
+        </p>
+            
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@civilization"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/civ//"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/CivGame?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.firaxis.com/" target="_blank" rel="noopener noreferrer" class="firaxis-link">
+                <img src="../Firaxis_Games.svg.png" alt="Firaxis Games Logo">
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="civilizations.js"></script> <!--Link to the JavaScript-->
+</body>
+</html>

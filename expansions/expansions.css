@@ -1,0 +1,341 @@
+/*Default body style*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Deep dark background for immersive feel */
+    color: #f5f5f5; /* Light text for readability */
+    font-family: 'Merriweather';
+    line-height: 1.6;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
+/* Container flex layout */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes logo left, nav right */
+    padding: 0 1rem;
+}
+  
+/* Logo image sizing */
+.logo img {
+    height: 125px; /* Adjust size as needed */
+    width: auto;
+}
+  
+/* Nav bar layout */
+.navigation-bar {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Nav links */
+.navigation-bar li a {
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.6rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navigation-bar li a:hover {
+    color: maroon; /* Change text color to white for contrast */
+}
+
+/* CTA button */
+.navigation-bar .cta {
+    background-color: goldenrod;
+    color: #111;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent it from wrapping */
+}
+  
+.navigation-bar .cta:hover {
+    background-color: goldenrod;
+    color: maroon;
+}
+  
+/* Navbar */
+.navbar {
+    background-color: #111;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Expansion Section Styling */
+
+.expansion {
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.hidden {
+    display: none;
+}
+
+.background img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+/* Overview box */
+.overview {
+    margin-bottom: 1.5rem;
+}
+.overview h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.overview p {
+    margin: 0.3rem 0;
+}
+
+.trailer video {
+  width: 100%;
+  max-width: 800px; /* optional limit */
+  height: auto;      /* maintain aspect ratio */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;    /* center video horizontally */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* optional shadow */
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.trailer {
+  display: flex;
+  justify-content: center; 
+  margin: 40px 0; 
+}
+
+/* Toggle button for features and civs/leaders */
+.toggle-features,
+.toggle-btn {
+    display: cent;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.toggle-features:hover,
+.toggle-btn:hover {
+    background-color: #444;
+}
+
+/* Features list hidden/shown */
+.features-list {
+    display: none;
+    margin-bottom: 1.5rem;
+}
+.features-list .feature {
+    background-color: #262626;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.features-list .feature h3 {
+    margin-top: 0;
+    color: #ffd700;
+}
+
+/* Civs & Leaders section */
+.civilizations_and_leaders .civs-leaders-content {
+    display: none;
+    margin-top: 1rem;
+}
+.civ-leader-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.civ-leader-card {
+    background-color: #262626;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+.civ-leader-card img.civ-logo {
+    height: 40px;
+}
+.civ-leader-card img.leader-portrait {
+    height: 120px;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+}
+.civ-logo-pair {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.divider {
+    margin: 4rem auto;
+    width: 80%;
+    border: 1px solid #888;
+}
+
+/* Footer Style */
+.site-footer {
+    background-color: #111;
+    color: goldenrod; 
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    width: 100%;
+    border-top: 3px solid goldenrod;
+    flex-shrink: 0;
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: maroon;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .footer-links a {
+    color: goldenrod;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: maroon;
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: goldenrod;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons a:hover {
+    color: maroon;
+    transform: scale(1.2);
+  }
+  
+  .firaxis-link img {
+    height: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .firaxis-link img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+  .overview h2 {
+    font-size: 1.4rem;
+  }
+
+  .navigation-bar {
+    gap: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .civ-leader-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .trailer video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (max-width: 768px) {
+  .overview h2 {
+    font-size: 1.6rem;
+  }
+
+  .navigation-bar {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .civ-leader-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .trailer video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}

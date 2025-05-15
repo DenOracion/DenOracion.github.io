@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!--Link to css stylesheet for layout and typography-->
+    <!--Third Party Fonts for texts and logos-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!--Cinzel font-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> <!--Merriweather font-->
+    <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet"> <!--FontAwesome for social media logos-->
+    <title>Sid Meier's Civilization VI</title>
+</head>
+<body>
+<header class="navbar"> <!--Header, inside is the logo of the game and a simple Navigation Bar-->
+<div class="container">
+    <div class="logo">
+        <img src="CivilizationVI-Aspyr-Logo__1_.png" alt="civ6 logo"> 
+    </div>
+    <nav>
+    <!--Navigation Bar, containing the different subpages of the website, allowing for accessibility for the user to visit the other pages-->
+        <ul class="navigation-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leaders/leaders.html">Leaders</a></li> <!--Information about the playable leaders in the game, from base game to DLC exclusive ones-->
+            <li><a href="civilizations/civilizations.html">Civilizations</a></li> <!--Information about playable civilizations, also from base game to DLC exclusive-->
+            <li><a href="expansions/expansions.html">Expansions</a></li> <!--Information about the different expansions for Civilization VI such as when they were released, and what they brought to the game-->
+            <li><a href="gallery/gallery.html">Gallery</a></li> <!--A gallery showcasing different pictures about the game, from leader concept art, to awesome mods the community has made-->
+            <li><a href="store/store.html" class="cta">Play Civilization VI Today!</a></li> <!--A link to the store where viewers can purchase Civilization VI-->
+        </ul>
+    </nav>
+</div>
+</header>
+
+<div class="container homepage"> <!--An image that the user first sees when entering the home page of the website, along with the slogan "Will your Civilization stand the test of time?"-->
+    <img src="wallpaper_sid_meiers_civilization_6_anthology_01_1920x1080.jpg" alt="civ6 homepage">
+    <div class="hometext">Will your Civilization stand the test of time?</div>
+</div>
+
+<!--Abstract for the game, giving a brief description for the game-->
+<section class="home-section">
+    <div class="abstract-section">
+      <h2 class="abstract-title">One More Turn</h2>
+      <!--Brief description for the game-->
+      <p class="abstract-text">Released in 2016, the sixth installment of the iconic 4X strategy series challenges players to lead a civilization from the stone age, all the way to the stars and achieve one of several victory conditions; through Domination, Science, Culture, Religion, and with the Gathering Storm expansion, Diplomacy.</p>
+    </div>
+    <div class="abstract-video"> <!--Plays the E3 2016 trailer for Civilization VI-->
+        <video autoplay muted loop playsinline>
+          <source src="CIVILIZATION VI - E3 2016 Walkthrough.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+</section>
+
+<!--A "What's New?" section, displaying  gameplay changes VI has compared to the V iteration -->
+<section class="new-section">
+    <img src="HD-wallpaper-civilization-6-civ-civilization-games.jpg" alt="WhatsNewBackground">
+    <div class="overlay">
+        <div class="changes-section">
+            <h2 class="changes-title">What's New?</h2>
+            <ul class="changes-text">
+                <li>District system introduces new ways to contain buildings, such as the campus district which now holds the scientific buildings, allowing for more sprawled out empires.</li>
+                <li>Revamped Civics: A new civic tree, copying the technology tree has been implemented alongside a new government system, replacing ideologies from 5. Each civic unlocks new policy cards that will each provide unique bonuses when placed inside the government. Different governments will also give different bonuses and hold different types of government cards.</li>
+                <li>Builders: Workers are now builders, units that can complete improvements instantly but use charges instead. These builders can build, repair or remove improvements on tiles while also being able to harvest features or resources to give a one time boost to the city the tile belongs to, but it will remove the resource or feature from the map.</li>
+                <li>City States: City States now play a more crucial part, with the envoy system, fight other civilizations for suzerainty over these city states and reap the benefits with stat boosts for every 3, 6, and 9 envoys players send and each city state having a unique suzerain bonus for the civilization with the most envoys inside the city state.</li>
+                <li>Reworked Happiness Mechanic: Civilization 6 removes the happiness mechanic and in its place, the amenities mechanic to manage empire happiness and push players towards a more expansionist playstyle.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--Footer containing social media link of  the developers of the game-->
+<footer class="site-footer">
+    <div class="footer-container">
+        <p class="footer-title">Sid Meier's Civilization VI</p>
+        
+        <p class="footer-links">
+            <a href="../index.html">Home</a> |
+            <a href="../leaders/leaders.html">Leaders</a> |
+            <a href="../civilizations/civilizations.html">Civilizations</a> |
+            <a href="../expansions/expansions.html">Expansions</a> |
+            <a href="../gallery/gallery.html">Gallery</a>
+        </p>
+        
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@civilization"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/civ/"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/CivGame?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.firaxis.com/" target="_blank" rel="noopener noreferrer" class="firaxis-link">
+                <img src="Firaxis_Games.svg.png" alt="Firaxis Games Logo">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

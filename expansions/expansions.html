@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="expansions.css"> <!--Link to css stylesheet for layout and typography-->
+    <!--Third Party Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!--Cinzel font-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> <!--Merriweather font-->
+    <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet"> <!--FontAwesome for social media logos-->
+    <title>Sid Meier's Civilization VI</title>
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="../CivilizationVI-Aspyr-Logo__1_.png" alt="civ6 logo">
+        </div>
+        <nav>
+            <ul class="navigation-bar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../leaders/leaders.html">Leaders</a></li>
+                <li><a href="../civilizations/civilizations.html">Civilizations</a></li>
+                <li><a href="../expansions/expansions.html">Expansions</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><a href="../store/store.html" class="cta">Play Civilization VI Today!</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--Sections for each Expansion, each expansion having a brief overview, trailer, features added and new leaders and civilizations added-->
+<!--Sections are ordered in chronological order, from first expansion released to the newest-->
+<section class="expansion">
+    <!--Background image for the section-->
+    <div class="background">
+        <img src="expansions_media/civ6riseandfall-1280-1517994331531_160w.jpg" alt="Rise and Fall Background image">
+    </div>
+
+    <!--Overview for Rise and Fall Expansion-->
+    <div class="overview-container">
+        <div class="overview">
+            <h2>Sid Meier's Civilization VI: Rise and Fall</h2>
+            <p>Released: February 8, 2018</p>
+            <p>The Civilization VI: Rise and Fall expansion launches new Loyalty and Governor systems and tasks players to lead their civilizations through Golden and Dark Ages. Alongside new units, districts, wonders and resources, eight new civilizations and 9 new leaders join the fray.</p>
+            <p>Rise and Fall is included in both the Platinum Edition and the Anthology Edition</p>
+        </div>
+        <!--Rise and Fall Trailer-->
+        <div class="trailer">
+            <video id="expansionVideo" controls>
+                <source src="Civilization VI_ Rise and Fall Expansion Announcement Trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="new-features">
+        <button class="toggle-features" data-target="rise-and-fall-features">
+            <span class="text">New Features</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <div class="features-list" id="rise-and-fall-features">
+        <div class="feature">
+            <h3>Golden Ages & Dark Ages</h3>
+            <p>As your civilization ebbs and flows, and you reach milestone Historic Moments, you will experience Dark Ages or Golden Ages, each providing specific challenges or bonuses based on your actions in-game. Rise triumphantly from a Dark Age, and your next Golden Age will be even stronger - a Heroic Age.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Loyalty System</h3>
+            <p>Cities now have individual loyalty to your leadership - let it fall too low, and face the consequences of low yields, revolts, and the potential to lose your city to another civilization, or its own independence. But one civilization’s loss can be your gain as you inspire Loyalty among cities throughout the map and further expand your borders.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Governors</h3>
+            <p>Recruit, appoint, and upgrade powerful characters with unique specialization bonuses and promotion trees to customize your cities, and reinforce Loyalty.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Enhanced Alliances</h3>
+            <p>An enhanced alliances system allows players to form different types of alliances and build bonuses over time.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Emergencies</h3>
+            <p>When a civilization grows too powerful, other civilizations can join a pact against the threatening civilization and earn rewards, or penalties, when the Emergency ends.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Timelines</h3>
+            <p>Review your civilization’s history at any time with the new Timeline feature, a visual journey through the Historic Moments that you encountered on your path to victory.</p>
+        </div>
+    </div>
+
+    <div class="civilizations_and_leaders">
+        <button class="toggle-btn">Show Civilizations & Leaders</button>
+        <div class="civs-leaders-content hidden">
+        <h3>New Civilizations & Leaders included in Rise and Fall:</h3>
+        <div class="civ-leader-grid">
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Korea_Logo.webp" alt="Korea Logo" class="civ-logo">
+                <img src="r&f_leaders/Seondeok_29.webp" alt="Seondeok" class="leader-portrait">
+            <p><strong>Korean Civilization</strong><br>Led by: Seondeok</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Dutch_29.webp" alt="Dutch Logo" class="civ-logo">
+                <img src="r&f_leaders/Wilhelmina_29.webp" alt="Wilhelmina" class="leader-portrait">
+            <p><strong>Dutch Civilization</strong><br>Led by: Wilhelmina</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Cree_29.webp" alt="Cree Logo" class="civ-logo">
+                <img src="r&f_leaders/Poundmaker_29.webp" alt="Poundmaker" class="leader-portrait">
+            <p><strong>Cree Civilization</strong><br>Led by: Poundmaker</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Georgian_29.webp" alt="Georgia Logo" class="civ-logo">
+                <img src="r&f_leaders/Tamar_29.webp" alt="Tamar" class="leader-portrait">
+            <p><strong>Georgian Civilization</strong><br>Led by: Tamar</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Indian_29.webp" alt="India Logo" class="civ-logo">
+                <img src="r&f_leaders/Chandragupta_29.webp" alt="Chandragupta" class="leader-portrait">
+            <p><strong>Indian Civilization</strong><br>Alternate Leader: Chandragupta</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Mapuche_29.webp" alt="Mapuche Logo" class="civ-logo">
+                <img src="r&f_leaders/Lautaro_29.webp" alt="Lautaro" class="leader-portrait">
+            <p><strong>Mapuche Civilization</strong><br>Led by: Lautaro</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Mongolian_29.webp" alt="Mongolia Logo" class="civ-logo">
+                <img src="r&f_leaders/Genghis_Khan_29.webp" alt="Genghis Khan" class="leader-portrait">
+            <p><strong>Mongolian Civilization</strong><br>Led by: Genghis Khan</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Scottish_29.webp" alt="Scotland Logo" class="civ-logo">
+                <img src="r&f_leaders/Robert_the_Bruce_29.webp" alt="Robert The Bruce" class="leader-portrait">
+            <p><strong>Scottish Civilization</strong><br>Led by: Robert The Bruce</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="r&f_logos/Zulu_29.webp" alt="Zulu Logo" class="civ-logo">
+                <img src="r&f_leaders/Shaka_29.webp" alt="Shaka" class="leader-portrait">
+            <p><strong>Zulu Civilization</strong><br>Led by: Shaka</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Divider between sections-->
+<hr class="divider">
+
+<!--Gathering Storm section - Follows the same structure of code as the Rise and Fall section just with changed information-->
+<section class="expansion">
+    <!--Background image for the section-->
+    <div class="background">
+        <img src="expansions_media/CIV-6-gathering-storm-key-art.jpg" alt="Gathering Storm Background image">
+    </div>
+    <div class="overview-container">
+        <div class="overview">
+            <h2>Sid Meier's Civilization VI: Gathering Storm</h2>
+            <p>Released: February 14, 2019</p>
+            <p>Civilization VI: Gathering Storm introduces an active planet where climate and tectonics present unique new challenges. Floods, droughts, and powerful storms force players to adapt to a changing environment, and the choices players make have a lasting impact on the world's temperature, potentially causing ice caps to melt and sea levels to rise.</p>
+            <p>Gathering Storm is included in both the Platinum Edition and the Anthology Edition</p>
+        </div>
+
+        <div class="trailer">
+            <video id="expansionVideo" controls>
+                <source src="Civilization VI_ Gathering Storm Announce Trailer (NEW EXPANSION).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="new-features">
+        <button class="toggle-features" data-target="gathering-storm-features">
+            <span class="text">New Features</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <div class="features-list" id="gathering-storm-features">
+        <div class="feature">
+            <h3>Environmental Effects</h3>
+            <p>Volcanoes, storms (blizzards, dust storms, tornadoes, hurricanes), climate change, floods, and droughts begin wreaking havoc on the planet.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Power and Consumable Resources</h3>
+            <p>Resources such as coal and oil can now be used to produce power for cities. While initially you'll be powering your most advanced buildings by burning carbon-based resources like coal and oil, but renewable energy sources also unlock as you progress to current-day technologies. Your choices about resource usage will directly affect the world's temperature and can cause melting ice caps and rising sea levels.</p>
+        </div>
+
+        <div class="feature">
+            <h3>New Engineering Projects</h3>
+            <p>Players can now overcome land difficulties with improvements such as canals, dams, tunnels, and railroads. When settling cities, consider the flood risk to coastal lowland areas, but keep in mind that in the late-game, technologies like Flood Barriers can be used to protect these tiles</p>
+        </div>
+
+        <div class="feature">
+            <h3>World Congress and the Diplomatic Victory</h3>
+            <p>Make your voice heard among the other leaders of the world. Earn Diplomatic Favor through Alliances, influencing city-states, competing in World Games, and more. Use Diplomatic Favor to extract promises from other leaders, vote on Resolutions, call a Special Session to address an emergency, and increase the weight of your votes to achieve the new Diplomatic Victory.</p>
+        </div>
+
+        <div class="feature">
+            <h3>A New Era</h3>
+            <p>The technology and civics trees have been expanded with the new Future Era, unlock new improvements such as seasteads, new policies and governments and projects like carbon recapture.</p>
+        </div>
+    </div>
+
+    <div class="civilizations_and_leaders">
+        <button class="toggle-btn">Show Civilizations & Leaders</button>
+        <div class="civs-leaders-content hidden">
+        <h3>New Civilizations & Leaders included in Gathering Storm:</h3>
+        <div class="civ-leader-grid">
+            <div class="civ-leader-card">
+                <img src="gs_logos/Canadian_29.webp" alt="Canada Logo" class="civ-logo">
+                <img src="gs_leaders/Wilfrid_Laurier_29.webp" alt="Wilfrid Laurier" class="leader-portrait">
+            <p><strong>Canada</strong><br>Led by: Wilfrid Laurier</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="gs_logos/Hungarian_29.webp" alt="Hungary Logo" class="civ-logo">
+                <img src="gs_leaders/Matthias_Corvinus_29.webp" alt="Matthias Corvinus" class="leader-portrait">
+            <p><strong>Hungarian Civilization</strong><br>Led by: Matthias Corvinus</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="gs_logos/Incan_29.webp" alt="Inca Logo" class="civ-logo">
+                <img src="gs_leaders/Pachacuti_29.webp" alt="Pachacuti" class="leader-portrait">
+            <p><strong>Inca Civilization</strong><br>Led by: Pachacuti</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="gs_logos/Maori_29.webp" alt="Maori Logo" class="civ-logo">
+                <img src="gs_leaders/Kupe_29.webp" alt="Kupe" class="leader-portrait">
+            <p><strong>Maori Civilization</strong><br>Led by: Kupe</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="gs_logos/Malian_29.webp" alt="Mali Logo" class="civ-logo">
+                <img src="gs_leaders/Mansa_Musa_29.webp" alt="Mansa Musa" class="leader-portrait">
+            <p><strong>Malian Civilization</strong><br>Led by: Mansa Musa</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="gs_logos/Ottoman_29.webp" alt="Ottoman Logo" class="civ-logo">
+                <img src="gs_leaders/Suleiman_29.webp" alt="Suleiman" class="leader-portrait">
+            <p><strong>Ottoman Civilization</strong><br>Led by: Suleiman</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="gs_logos/Phoenician_29.webp" alt="Phoenicia Logo" class="civ-logo">
+                <img src="gs_leaders/Dido_29.webp" alt="Dido" class="leader-portrait">
+            <p><strong>Phoenician Civilization</strong><br>Led by: Dido</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="gs_logos/Swedish_29.webp" alt="Sweden Logo" class="civ-logo">
+                <img src="gs_leaders/Kristina_29.webp" alt="Kristina" class="leader-portrait">
+            <p><strong>Swedish Civilizations</strong><br>Led by: Kristina</p>
+            </div>
+            <div class="civ-leader-card">
+                <div class="civ-logo-pair">
+                    <img src="gs_logos/Eleanor_French_29_29.webp" alt="France Logo" class="civ-logo">
+                    <img src="gs_logos/Eleanor_English_29_29.webp" alt="England Logo" class="civ-logo">
+                </div>
+                <img src="gs_leaders/Eleanor_of_Aquitaine_29_29.webp" alt="Eleanor of Aquitaine" class="leader-portrait">
+                <p><strong>French & English Civilizations</strong><br>Alternate Leader: Eleanor of Aquitaine</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Divider between sections-->
+<hr class="divider">
+<!--Section for the New Frontier Pass-->
+<section class="expansion">
+    <div class="background">
+        <img src="expansions_media/nfp.jpg" alt="New Frontier Pass Background image">
+    </div>
+    <div class="overview">
+        <h2>Sid Meier's Civilization VI: New Frontier Pass</h2>
+        <p>Released: 2020-2021</p>
+        <p>The Civilization VI: New Frontier Pass is a series of six DLC packs released within a year and features another eight new civilizations, nine new leaders, six new game modes, and a variety of new content such as units, wonders, districts, resources and more.</p>
+        <p>The New Frontier Pass is included in the Anthology Edition</p>
+    </div>
+<!--No trailer available for the New Frontier Pass-->
+<!--Rest of the section follows same code structure as the Rise and Fall section-->  
+    <div class="new-features">
+        <button class="toggle-features" data-target="new-frontier-features">
+            <span class="text">New Features</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <div class="features-list" id="new-frontier-features">
+        <div class="feature">
+            <h3>New Game Modes</h3>
+            <p>Six new game modes, provide brand new ways for players to play Civilization VI.</p>
+            <ul>
+                <li><strong>Apocalypse Mode:</strong> Face increased disasters and the looming threat of a world-ending meteor shower</li>
+                <li><strong>Secret Societies Mode:</strong> Join mysterious organizations with powerful bonuses</li>
+                <li><strong>Dramatic Ages Mode:</strong> Experience more impactful Golden and Dark Ages</li>
+                <li><strong>Heroes & Legends Mode:</strong> Recruit powerful heroes from mythology</li>
+                <li><strong>Monopolies & Corporations Mode:</strong> Build economic empires and luxury monopolies</li>
+                <li><strong>Zombies Mode:</strong> Survive the undead as fallen units rise again as zombies</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>New Natural and World Wonders</h3>
+            <p>Discover new natural wonders such as the Bermuda Triangle and construct new world wonders such as Etemenaki and the Biosphère.</p>
+        </div>
+
+        <div class="feature">
+            <h3>New Map and Resources</h3>
+            <p>Unlock the new Highlands and Wetlands maps and new resources to improve; Honey and Maize</p>
+        </div>
+
+        <div class="feature">
+            <h3>New Districts and Buildings</h3>
+            <p>Construct the new Diplomatic Quarter and Preserve districts and their respective buildings: the Consulate & Chancery and the Grove & Sanctuary.</p>
+        </div>
+
+        <div class="feature">
+            <h3>New Leader Personas</h3>
+            <p>Alongside the new leaders, owners of the New Frontier Pass will be given the Teddy Roosevelt and Catherine De Medici persona packs. Each Persona Pack contains a brand new take on each leader, with a new leader model and background, new gameplay bonuses, and an updated agenda that reflect the changes to the leader’s personality.</p>
+        </div>
+    </div>
+
+    <div class="civilizations_and_leaders">
+        <button class="toggle-btn">Show Civilizations & Leaders</button>
+        <div class="civs-leaders-content hidden">
+        <h3>New Civilizations & Leaders included in the New Frontier Pass:</h3>
+        <div class="civ-leader-grid">
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Mayan_29.webp" alt="Maya Logo" class="civ-logo">
+                <img src="nfp_leaders/Lady_Six_Sky_29.webp" alt="Lady Six Sky" class="leader-portrait">
+            <p><strong>Mayan Civilization</strong><br>Led by: Lady Six Sky</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Gran_Colombian_29.webp" alt="Gran Colombia Logo" class="civ-logo">
+                <img src="nfp_leaders/Sim3Fvar_29.webp" alt="Simón Bolívar" class="leader-portrait">
+            <p><strong>Gran Colombian Civilization</strong><br>Led by: Simón Bolívar</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Ethiopian_29.webp" alt="Ethiopia Logo" class="civ-logo">
+                <img src="nfp_leaders/Menelik_II_29.webp" alt="Menelik II" class="leader-portrait">
+            <p><strong>Ethiopian Civilization</strong><br>Led by: Menelik II</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Gallic_29.webp" alt="Gaul Logo" class="civ-logo">
+                <img src="nfp_leaders/Ambiorix_29.webp" alt="Ambiorix" class="leader-portrait">
+            <p><strong>Gallic Civilization</strong><br>Led by: Ambiorix</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Byzantine_29.webp" alt="Byzantium Logo" class="civ-logo">
+                <img src="nfp_leaders/Basil_II_29.webp" alt="Basil II" class="leader-portrait">
+            <p><strong>Byzantium Civilization</strong><br>Led by: Basil II</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Babylonian_29.webp" alt="Babylon Logo" class="civ-logo">
+                <img src="nfp_leaders/Hammurabi_29.webp" alt="Hammurabi" class="leader-portrait">
+            <p><strong>Babylonian Civilization</strong><br>Led by: Hammurabi</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Vietnamese_29.webp" alt="Vietnam Logo" class="civ-logo">
+                <img src="nfp_leaders/B3Fu_29.webp" alt="Ba Trieu" class="leader-portrait">
+            <p><strong>Vietnamese Civilization</strong><br>Led by: Bà Triệu</p>
+            </div>
+            <div class="civ-leader-card">
+                <div class="civ-logo-pair">
+                    <img src="nfp_logos/Chinese_29.webp" alt="China Logo" class="civ-logo">
+                    <img src="r&f_logos/Mongolian_29.webp" alt="Mongolia Logo" class="civ-logo">
+                </div>
+                <img src="nfp_leaders/Kublai_Khan_29_29.webp" alt="Kublai Khan" class="leader-portrait">
+                <p><strong>Chinese & Mongolian Civilizations</strong><br>Alternate Leader: Kublai Khan</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Portuguese_29.webp" alt="Portugal Logo" class="civ-logo">
+                <img src="nfp_leaders/Joao_29.webp" alt="Joao III" class="leader-portrait">
+            <p><strong>Portuguese Civilization</strong><br>Led by: João III</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section class="expansion">
+    <!--Background image for the section-->
+    <div class="background">
+        <img src="expansions_media/civ-6-leader-pass.webp" alt="Leader Pass Background image">
+    </div>
+
+    <div class="overview">
+        <h2>Sid Meier's Civilization VI: Leader Pass</h2>
+        <p>Released: November 21, 2022 - March 29, 2023</p>
+        <p>Civilization VI: Leader Pass brings twelve new alternative leaders for existing civilizations, giving fresh takes on gameplay for each of these civilizations, as well as six new personas for older leaders.</p>
+        <p>Gathering Storm is included in both the Platinum Edition and the Anthology Edition</p>
+    </div>
+    <!--Trailer for the Leader Pass-->
+    <div class="trailer">
+        <video id="expansionVideo" controls>
+            <source src="Civilization VI_ Gathering Storm Announce Trailer (NEW EXPANSION).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!--Since this expansion/dlc did not add any features, the new features section seen in the other sections has been removed-->
+    <div class="civilizations_and_leaders">
+        <button class="toggle-btn">Show Leaders and Personas</button>
+        <div class="civs-leaders-content hidden">
+        <h3>New Alternate Leaders included in the Leader Pass:</h3>
+        <div class="civ-leader-grid">
+            <div class="civ-leader-card">
+                <img src="lp_logos/America3.webp" alt="Alt America Logo" class="civ-logo">
+                <img src="lp_leaders/Abraham_Lincoln_29.webp" alt="Abraham Lincoln" class="leader-portrait">
+            <p><strong>Alternate Leader for the American Civilization:</strong> Abraham Lincoln</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Kongo3.webp" alt="Alt Kongo Logo" class="civ-logo">
+                <img src="lp_leaders/Nzinga_Mbande_29.webp" alt="Nzinga Mbande" class="leader-portrait">
+            <p><strong>Alternate Leader for the Kongolese Civilization:</strong> Nzinga Mbande</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Japanese_29.webp" alt="Japan Logo" class="civ-logo">
+                <img src="lp_leaders/Tokugawa_29.webp" alt="Tokugawa" class="leader-portrait">
+                <p><strong>Alternate Leader for the Japanese Civilization:</strong> Tokugawa</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Persia2.webp" alt="Alt Persia Logo" class="civ-logo">
+                <img src="lp_leaders/Nader_Shah_29.webp" alt="Nader Shah" class="leader-portrait">
+            <p><strong>Alternate Leader for the Persian Civilization:</strong> Nader Shah</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/China2.webp" alt="Alt China Logo" class="civ-logo">
+                <img src="lp_leaders/Wu_Zetian_29.webp" alt="Wu Zetian" class="leader-portrait">
+            <p><strong>Alternate Leader for the Chinese Civilization:</strong> Wu Zetian</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/China4.webp" alt="2nd Alt China Logo" class="civ-logo">
+                <img src="lp_leaders/Yongle_29.webp" alt="Yongle" class="leader-portrait">
+            <p><strong>Alternate Leader for the Chinese Civilization:</strong> Yongle</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Egypt2.webp" alt="Alt Egypt Logo" class="civ-logo">
+                <img src="lp_leaders/Ramses_II_29.webp" alt="Ramses II" class="leader-portrait">
+            <p><strong>Alternate Leader for the Egyptian Civilization:</strong> Ramses II</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Mali2.webp" alt="Alt Mali Logo" class="civ-logo">
+                <img src="lp_leaders/Sundiata_Keita_29.webp" alt="Sundiata Keita" class="leader-portrait">
+            <p><strong>Alternate Leader for the Malian Civilization:</strong> Sundiata Keita</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Byzantine_29.webp" alt="Byzantine Logo" class="civ-logo">
+                <img src="lp_leaders/Theodora_29.webp" alt="Theodora" class="leader-portrait">
+            <p><strong>Alternate Leader for the Byzantine Civilization:</strong> Theodora</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/German_29_29.webp" alt="Alt German Logo" class="civ-logo">
+                <img src="lp_leaders/Ludwig_II_29.webp" alt="Ludwig II" class="leader-portrait">
+            <p><strong>Alternate Leader for the German Civilization:</strong> Ludwig II</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Korea2.webp" alt="Alt Korea Logo" class="civ-logo">
+                <img src="lp_leaders/Sejong_29.webp" alt="Sejong" class="leader-portrait">
+            <p><strong>Alternate Leader for the Korean Civilization:</strong> Sejong</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/England2.webp" alt="Alt England Logo" class="civ-logo">
+                <img src="lp_leaders/Elizabeth_I_29.webp" alt="Elizabeth I" class="leader-portrait">
+            <p><strong>Alternate Leader for the English Civilization:</strong> Elizabeth I</p>
+            </div>
+        </div>
+
+        <h3>New Personas for old Leaders included in the Leader Pass:</h3>
+        <div class="civ-leader-grid">
+            <div class="civ-leader-card">
+                <img src="lp_logos/Arabia2.webp" alt="Alt Arabian Logo" class="civ-logo">
+                <img src="lp_leaders/Saladin_29_29.webp" alt="Saladin Alt" class="leader-portrait">
+            <p><strong>New Persona for Saladin:</strong> Sultan Saladin</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Ottoman4.webp" alt="Alt Ottoman Logo" class="civ-logo">
+                <img src="lp_leaders/Suleiman_29_29.webp" alt="Suleiman Alt" class="leader-portrait">
+            <p><strong>New Persona for Suleiman:</strong> Suleiman The Magnificent</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="nfp_logos/Chinese_29.webp" alt="China Logo" class="civ-logo">
+                <img src="lp_leaders/Qin_Shi_Huang_29_29.webp" alt="Qin Shi Huang Alt" class="leader-portrait">
+            <p><strong>New Persona for Qin Shi Huang:</strong> Qin Shi Huang the Unifier</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Egypt3.webp" alt="2nd Alt Egypt Logo" class="civ-logo">
+                <img src="lp_leaders/Cleopatra_29_29.webp" alt="Cleopatra Alt" class="leader-portrait">
+            <p><strong>New Persona for Cleopatra:</strong> Ptolemaic Cleopatra</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/Norway2.webp" alt="Alt Norway Logo" class="civ-logo">
+                <img src="lp_leaders/Harald_Hardrada_29_29.webp" alt="Harald_Hardrada Alt" class="leader-portrait">
+                <p><strong>New Persona for Harald Hardrada:</strong> Varangian Harald Hardrada</p>
+            </div>
+            <div class="civ-leader-card">
+                <img src="lp_logos/England3.webp" alt="2nd Alt England Logo" class="civ-logo">
+                <img src="lp_leaders/Victoria_29_29.webp" alt="Victoria Alt" class="leader-portrait">
+                <p><strong>New Persona for Victoria:</strong> Victoria - Age of Steam</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Footer containing social media links, for the developers of the game-->
+<footer class="site-footer">
+    <div class="footer-container">
+        <p class="footer-title">Sid Meier's Civilization VI</p>
+        
+        <p class="footer-links">
+            <a href="../index.html">Home</a> |
+            <a href="../leaders/leaders.html">Leaders</a> |
+            <a href="../civilizations/civilizations.html">Civilizations</a> |
+            <a href="../expansions/expansions.html">Expansions</a> |
+            <a href="../gallery/gallery.html">Gallery</a>
+        </p>
+        
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@civilization"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/civ/"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/CivGame?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.firaxis.com/" target="_blank" rel="noopener noreferrer" class="firaxis-link">
+                <img src="../Firaxis_Games.svg.png" alt="Firaxis Games Logo">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="expansions.js"></script> <!--JavaScript for the Expansions page-->
+</html>
