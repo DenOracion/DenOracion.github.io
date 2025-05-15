@@ -5,7 +5,7 @@ body {
   font-family: 'Merriweather', sans-serif;
   background-color: #1e1e1e; /* Civ VI dark background */
   color: #f4f1e8; /* Pale parchment-style text */
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 /* Apply Cinzel to all headers */
